@@ -18,8 +18,8 @@ html{
 .container{
     background-color: white;
     position: absolute;
-    width:450px;
-    height: 600px;
+    max-width:450px;
+    max-height: 600px;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -31,7 +31,7 @@ html{
 display: block;
 margin-left: auto;
 margin-right: auto;
-width: 400px;
+width: calc(100% - 50px);
 border-radius: 10px;
 margin-top: 20px;
 }
@@ -76,4 +76,36 @@ img.person{
 }
 .name{
     margin-left: 10px;
+} 
+/* create media query from 0 to 500px width*/
+@media only screen and (max-width:500px){
+    .container{
+        max-width: 350px;
+        max-height: 500px;
+    }
+    .main{
+        width: calc(100% - 20px);
+    }
+    .right{
+        margin-left: 10px;
+    }
+    .title{
+        width: 80px;
+        font-size: 15px;
+    }
+    h1{
+        font-size: 15px;
+    }
+    p{
+        font-size: 15px;
+    }
+    div.person{
+        margin-top: 10px;
+    }
+    img.person{
+        width: 25px;
+    }
+    .name{
+        margin-left: 5px;
+    }
 }
